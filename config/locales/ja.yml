@@ -4,6 +4,14 @@ ja:
       sex:
         male: 男性
         female: 女性
+    workout:
+      part:
+        chest: 胸
+        shoulder: 肩
+        stomach: 腹
+        back: 背中
+        arm: 腕
+        leg: 脚
 
   activerecord:
     attributes:

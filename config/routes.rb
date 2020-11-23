@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'tops#index'
+
+  get "mypage", to: "mypages#index", as: :mypages
+
+  resources :workouts, only:[:new,:create,:show,:edit,:update,:destroy]
   
   get 'youtube/index'
   devise_scope :user do
