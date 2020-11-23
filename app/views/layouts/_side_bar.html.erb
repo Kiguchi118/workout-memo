@@ -1,0 +1,14 @@
+<nav>
+    <header>
+        筋トレ記録<i class="fas fa-hand-point-up fa-lg fa-fw"></i>
+    </header>
+    <div class="nav-container">
+        <ul>
+            <% if user_signed_in? %>
+                <%= render 'layouts/user_logged_in' %>
+            <% else %>
+                <%= render 'layouts/user_not_logged_in' %>
+            <% end %>
+        </ul>
+    </div>
+</nav>
