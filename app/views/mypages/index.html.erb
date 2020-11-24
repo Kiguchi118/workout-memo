@@ -1,9 +1,12 @@
 <h1>マイページ</h1>
 
 <div class="memo-container">
-    <div class="memo-view">
+    <div class="view">
         <div class="memo-head">
             <div class="memo-title">記録</div>
+        </div>
+        <div class="graph-content">
+            <%= column_chart @data, colors: ['#0112ff7a'], width: '400px', height: '250px' %>
         </div>
         <div class="memo-detail">
             <table>
@@ -27,3 +30,4 @@
         </div>
     </div>
 </div>
+

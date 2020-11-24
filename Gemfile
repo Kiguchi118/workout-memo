@@ -65,3 +65,6 @@ gem 'enum_help'
 # ページネーション
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+
+# グラフ
+gem "chartkick"
