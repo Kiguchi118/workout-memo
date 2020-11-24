@@ -61,3 +61,7 @@ gem 'devise'
 
 # enumをI18nに対応
 gem 'enum_help'
+
+# ページネーション
+gem 'kaminari'
+gem 'kaminari-bootstrap'

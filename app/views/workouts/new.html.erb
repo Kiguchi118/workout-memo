@@ -7,16 +7,7 @@
 
             <div class="field">
                 <%= f.label :date, "日付", class: "form-label" %>
-            　  <%= raw sprintf(
-                        f.date_select(
-                            :date,          
-                            use_month_numbers: true,
-                            start_year:     (Time.now.year - 120),
-                            end_year:       (Time.now.year),
-                            default:        Date.new(1980, 1, 1),
-                            date_separator: '%s'),
-                        '年 ', '月 ') + '日'
-                %>
+                <%= f.date_select :date, autofocus: true, class: 'form-content' %>
             </div> 
 
             <div class="field">

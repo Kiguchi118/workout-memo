@@ -26,6 +26,6 @@ class WorkoutsController < ApplicationController
 
   private
     def workout_params
-      params.require(:workout).permit(:user_id,:part,:content,:memo)
+      params.require(:workout).permit(:user_id,:date,:part,:content,:memo)
     end
 end

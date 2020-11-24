@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_102155) do
 
   create_table "workouts", force: :cascade do |t|
     t.integer "user_id"
+    t.datetime "date"
     t.integer "part"
     t.string "content"
     t.string "memo"

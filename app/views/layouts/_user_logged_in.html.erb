@@ -1,5 +1,17 @@
 <li>
+    <%= link_to mypages_path, class: "btn-pink" do %>
+        マイページ <i class="fas fa-user-alt faa-ring animated-hover fa-lg fa-fw"></i>
+    <% end %>
+</li>
+
+<li>
+    <%= link_to new_workout_path, class: "btn-pink" do %>
+        記録する <i class="fas fa-sd-card faa-ring animated-hover fa-lg fa-fw"></i>
+    <% end %>
+</li>
+
+<li>
     <%= link_to destroy_user_session_path, method: :delete, class: "btn-pink" do %>
-        ログアウト<i class="fas fa-sign-out-alt fa-fw faa-ring animated-hover"></i>
+        ログアウト <i class="fas fa-sign-out-alt faa-ring animated-hover fa-lg fa-fw"></i>
     <% end %>
 </li>

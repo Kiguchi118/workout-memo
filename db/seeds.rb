@@ -12,5 +12,14 @@ User.create!(
     password: "abc123ii",
     height: 171.3,
     sex: 0,
- )
- 
+)
+
+30.times do |n|
+    Workout.create!(
+        user_id: 1,
+        date: "2020/11/24",
+        part: rand(0..5),
+        content: "サンプル内容#{n}",
+        memo: "サンプル記録",
+    )
+end

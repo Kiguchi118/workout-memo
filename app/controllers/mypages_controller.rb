@@ -3,6 +3,6 @@ class MypagesController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
-    @workout = current_user.workouts
+    @workouts = current_user.workouts.order(id: "DESC")
   end
 end

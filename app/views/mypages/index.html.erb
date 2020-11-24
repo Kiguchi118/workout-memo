@@ -1,3 +1,29 @@
 <h1>マイページ</h1>
 
-<%= @user.email %>
+<div class="memo-container">
+    <div class="memo-view">
+        <div class="memo-head">
+            <div class="memo-title">記録</div>
+        </div>
+        <div class="memo-detail">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="tab-date">日付</th>
+                        <th class="tab-part">部位</th>
+                        <th class="tab-content">内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @workouts.each do |workout| %>
+                        <tr>
+                            <td><%= workout.date.strftime('%Y/%m/%d') %></td>
+                            <td><%= workout.part_i18n %></td>
+                            <td><%= workout.content %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
