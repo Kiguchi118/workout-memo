@@ -13,7 +13,6 @@
             <div class="field">
                 <%= f.label :part, "部位", class: "form-label" %>
                 <%= f.select :part, Workout.parts.keys.map {|k| [I18n.t("enums.workout.part.#{k}"), k]} %>
-                
             </div>
 
             <div class="field">

@@ -6,7 +6,7 @@
             <div class="memo-title">記録</div>
         </div>
         <div class="graph-content">
-            <%= column_chart @data, colors: ['#0112ff7a'] %>
+            <%= column_chart @memoData, colors: ['#0112ff7a'] %>
         </div>
         <div class="memo-detail">
             <table>
@@ -35,14 +35,15 @@
             <div class="memo-title">体重</div>
         </div>
         <div class="graph-content">
-            <%= line_chart @data, colors: ['#ff0000d7'] %>
+            <%= line_chart @weightData, colors: ['#ff0000d7'], min: @lowerLimit, max: @upperLimit %>
         </div>
         <div class="memo-detail">
             <table>
                 <thead>
                     <tr>
-                        <th class="tab-weight">体重</th>
-                        <th class="tab-bfp">体脂肪率</th>
+                        <th class="tab-date">日付</th>
+                        <th class="tab-weight">体重(kg)</th>
+                        <th class="tab-bfp">体脂肪率(%)</th>
                         <th class="tab-bmi">BMI</th>
                         <th class="tab-lbm">LBM</th>
                     </tr>
@@ -50,6 +51,7 @@
                 <tbody>
                     <% @bodies.each do |body| %>
                         <tr>
+                            <td><%= body.date.strftime('%Y/%m/%d') %></td>
                             <td><%= body.weight %></td>
                             <td><%= body.body_fat_percentage %></td>
                             <td><%= body.bmi %></td>
@@ -62,3 +64,4 @@
     </div>
 </div>
 
+<%= @weekWeight %>

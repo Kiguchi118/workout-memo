@@ -7,6 +7,11 @@
             <%= render 'shared/error_messages', object: f.object %>
 
             <div class="field">
+                <%= f.label :date, "日付", class: "form-label" %>
+                <%= f.date_select :date, autofocus: true, class: 'form-content' %>
+            </div> 
+
+            <div class="field">
                 <%= f.label :weight, "体重", class: "form_label" %>
                 <%= f.number_field :weight, step: '0.1', autofocus: true, class:'form_content', placeholder: "58.4" %>
                 kg

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_082455) do
 
   create_table "bodies", force: :cascade do |t|
     t.integer "user_id"
+    t.datetime "date"
     t.float "weight"
     t.float "body_fat_percentage"
     t.float "bmi"
