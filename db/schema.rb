@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_23_102155) do
+ActiveRecord::Schema.define(version: 2020_11_24_082455) do
+
+  create_table "bodies", force: :cascade do |t|
+    t.integer "user_id"
+    t.float "weight"
+    t.float "body_fat_percentage"
+    t.float "bmi"
+    t.float "lbm"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bodies_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,5 +48,6 @@ ActiveRecord::Schema.define(version: 2020_11_23_102155) do
     t.index ["user_id"], name: "index_workouts_on_user_id"
   end
 
+  add_foreign_key "bodies", "users"
   add_foreign_key "workouts", "users"
 end

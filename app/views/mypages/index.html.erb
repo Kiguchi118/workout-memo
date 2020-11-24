@@ -6,7 +6,7 @@
             <div class="memo-title">記録</div>
         </div>
         <div class="graph-content">
-            <%= column_chart @data, colors: ['#0112ff7a'], width: '400px', height: '250px' %>
+            <%= column_chart @data, colors: ['#0112ff7a'] %>
         </div>
         <div class="memo-detail">
             <table>
@@ -23,6 +23,37 @@
                             <td><%= workout.date.strftime('%Y/%m/%d') %></td>
                             <td><%= workout.part_i18n %></td>
                             <td><%= workout.content %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="view">
+        <div class="memo-head">
+            <div class="memo-title">体重</div>
+        </div>
+        <div class="graph-content">
+            <%= line_chart @data, colors: ['#ff0000d7'] %>
+        </div>
+        <div class="memo-detail">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="tab-weight">体重</th>
+                        <th class="tab-bfp">体脂肪率</th>
+                        <th class="tab-bmi">BMI</th>
+                        <th class="tab-lbm">LBM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @bodies.each do |body| %>
+                        <tr>
+                            <td><%= body.weight %></td>
+                            <td><%= body.body_fat_percentage %></td>
+                            <td><%= body.bmi %></td>
+                            <td><%= body.lbm %></td>
                         </tr>
                     <% end %>
                 </tbody>

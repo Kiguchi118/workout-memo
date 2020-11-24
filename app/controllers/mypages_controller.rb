@@ -4,6 +4,7 @@ class MypagesController < ApplicationController
   def index
     @user = User.find(current_user.id)
     @workouts = current_user.workouts.order(id: "DESC")
+    @bodies = current_user.bodies.order(id: "DESC")
 
     # 部位ごとの回数
     @data = {}

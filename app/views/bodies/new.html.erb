@@ -1,0 +1,26 @@
+<h1>体重記録</h1>
+
+
+<div class="form-container">
+    <%= form_with(model: @body, local: true) do |f| %>
+        <div class="box-form">
+            <%= render 'shared/error_messages', object: f.object %>
+
+            <div class="field">
+                <%= f.label :weight, "体重", class: "form_label" %>
+                <%= f.number_field :weight, step: '0.1', autofocus: true, class:'form_content', placeholder: "58.4" %>
+                kg
+            </div>
+
+            <div class="field">
+                <%= f.label :body_fat_percentage, "体脂肪率", class: "form_label" %>
+                <%= f.number_field :body_fat_percentage, step: '0.1', autofocus: true, class:'form_content', placeholder: "15.0" %>
+                %
+            </div>
+
+            <div class="actions">
+                <%= f.submit "記録" %>
+            </div>
+        </div>
+    <% end %>
+</div>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "mypage", to: "mypages#index", as: :mypages
 
   resources :workouts, only:[:new,:create,:show,:edit,:update,:destroy]
+  resources :bodies, only:[:new,:create,:show,:edit,:update,:destroy]
   
   get 'youtube/index'
   devise_scope :user do

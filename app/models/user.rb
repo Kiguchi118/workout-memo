@@ -7,4 +7,5 @@ class User < ApplicationRecord
   enum sex: { male: 0, female: 1 }
 
   has_many :workouts, dependent: :destroy
+  has_many :bodies, dependent: :destroy
 end

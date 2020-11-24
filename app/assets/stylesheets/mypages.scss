@@ -39,7 +39,7 @@
 }
 
 .graph-content {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .memo-detail {
@@ -66,6 +66,18 @@
       }
       .tab-content {
         width: 65%;
+      }
+      .tab-weight {
+        width: 20%;
+      }
+      .tab-bfp {
+        width: 30%;
+      }
+      .tab-bmi {
+        width: 25%;
+      }
+      .tab-lbm {
+        width: 25%;
       }
     }
     tbody {
